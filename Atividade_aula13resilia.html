@@ -1,0 +1,73 @@
+<meta charset="UTF-8">
+
+    <script>
+        function PulaLinha () {
+            document.write("<br>");
+            }
+        document.write("<h1>Calculando a Inflação</h1>");
+
+        //A inflação de cada um dos alimentos no período//
+        document.write("<p> - A Inflação de cada alimento por período: </p>");
+
+        function DividirValorInflacao(ValorInicial, ValorFinal, Alimento) {
+
+            var produtos = ValorFinal - ValorInicial
+            var Arrendondada = Math.round(produtos*100)/100
+
+            return ("No período de 6 dias, a inflação do(a) " + Alimento + " foi " + Arrendondada)
+        }
+
+            var Tomate = DividirValorInflacao(3.30, 4.70, "Tomate");
+            //resultado divisão tomate
+            
+            var Arroz = DividirValorInflacao(2.99, 3.25, "Arroz");
+            //resultado divisão arroz
+
+            var Cenoura = DividirValorInflacao(3.99, 4.14, "Cenoura");
+            //resultado divisão cenoura
+
+        document.write(Tomate + "<br>");
+        PulaLinha();
+        document.write(Arroz + "<br>");
+        PulaLinha();
+        document.write(Cenoura + "<br>");
+        PulaLinha();
+        PulaLinha();
+
+        //A inflação média no período//
+        document.write("<p> - A Inflação média no período foi de: </p>");
+
+        function CalculandoAMedia(Tomate, Cenoura, Arroz) {
+
+            var Media = (Tomate + Cenoura + Arroz)/3
+            var arrendonda = Math.round(Media*100)/100
+
+            return("No período de 6 dias, a média de todos os alimentos foi " + arrendonda)
+        }
+            var MediaCalculada = CalculandoAMedia(1.4, 0.15, 0.26);
+
+        document.write(MediaCalculada + "<br><br><br>");
+
+        //A estimativa diária da inflação para cada alimento foi//
+        document.write("<p> - A Estimativa diária entre esses alimentos é de: </p>");
+
+        function CalcularInflacaoDiaria(ValorInicial, ValorFinal, Alimento, Dias) {
+
+            var produtos = ValorFinal - ValorInicial;
+            var InflacaoPorDia = produtos/Dias; 
+            var InflacaoArredondada = Math.round(InflacaoPorDia*100)/100
+
+            return ("A estimativa diária da inflação nesse período é de " + InflacaoArredondada)
+
+        }
+
+            var tomate = CalcularInflacaoDiaria(3.30, 4.70, "Tomate", 6);
+            var arroz = CalcularInflacaoDiaria(2.99, 3.25, "Arroz", 6);
+            var cenoura = CalcularInflacaoDiaria(3.99, 4.14, "Cenoura", 6);
+        
+        document.write(tomate + "<br><br>");
+        document.write(arroz + "<br><br>");
+        document.write(cenoura + "<br><br>");
+
+
+    </script>
