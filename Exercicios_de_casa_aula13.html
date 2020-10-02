@@ -1,0 +1,67 @@
+<meta charset="UTF-8">
+
+    <script>
+
+        function PulaLinha () {
+
+        document.write("<br>");
+    }
+
+    document.write("<h1>Dividindo as Laranjas</h1>");
+    PulaLinha()
+
+//A divisão das Laranjas//
+        
+    function FazerCalculo(NumeroDeLaranjas, NumerodePessoas) {
+
+    return NumeroDeLaranjas/NumerodePessoas;
+    }
+    
+    var pessoas = prompt("Informe o número de vizinhos");
+    var laranjas = prompt("informe o número de laranjas");
+
+    var resultado = FazerCalculo(12, 6)
+    document.write("Cada vizinho receberá exatamente: " + resultado);
+    PulaLinha()
+
+//A Sobra das Laranjas//
+    
+    function QuantoSobra(LaranjasDistribuidas, NumeroDeLaranjas) {
+
+    return NumeroDeLaranjas - LaranjasDistribuidas;
+
+    }
+
+    var quantosobrou = QuantoSobra(10, 12)
+
+    var distribuicao = prompt("Informe quantas laranjas foram distribuidas");
+
+    document.write("Sobrou para Joselito: " + quantosobrou);
+    PulaLinha()
+
+//Pizaria Resilia//
+    document.write("<h1>Pizzaria Resilia</h1>");
+    PulaLinha()
+
+    function CalcularProducao(custo, valor, nome) {
+        
+        var Lucro = valor - custo
+        var Imposto = valor*(8.9/100)
+        var arrendonda = Math.round(Imposto*100)/100
+
+        return  "Para a pizza de " + nome + " o lucro líquido é de R$ " + Lucro + " e o imposto é de " + arrendonda + "%."
+    }
+
+    var resultado = CalcularProducao(35, 50, "Calabresa");
+    
+    var nome = prompt("Informe o nome da sua pizza: ");
+    var valor = prompt("Informe o Valor da pizza escolhida: ");
+    var custo = prompt("informe o custo da pizza produzida: ");
+
+    document.write(resultado + "<br>")
+
+
+    </script>
+
+
+    
