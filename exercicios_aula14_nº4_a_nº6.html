@@ -1,0 +1,70 @@
+<meta charset="UTF-8">
+
+<Script>
+
+//Exercicio 4
+
+    function pulaLinha() {
+
+    document.write("<br><br>");
+
+}
+
+   document.write(" #Exercicio 4: ")
+   pulaLinha()
+
+   function Calcularmaioridade(idadeusuario, idadepermitida) {
+
+        if (idadeusuario != idadepermitida)
+            {  return "Você não pode dirigir no Brasil!!"
+
+        } else (idadeusuario >= idadepermitida)
+           { return "Você pode dirigir no Brasil!!"
+        }
+    }
+
+        var idadeusuario = prompt("Qual sua idade?")
+
+        document.write(Calcularmaioridade(17, 21));
+        pulaLinha()
+
+//Exercicio 5
+
+    function Poderbeber(idadeusuario, idadepermitida) {
+
+        if (idadeusuario == idadepermitida)
+            {  return "Você não pode beber no Brasil!!"
+
+        } else (idadeusuario >= idadepermitida)
+           { return "Você pode beber no Brasil!!"
+        }
+    }
+
+        var idadeusuario = prompt("Qual sua idade?")
+
+        document.write(Poderbeber(17, 21));
+        pulaLinha()
+
+//Exercicio 6
+
+    function AtivarSemaforo(cor1, cor2, cor3) {
+
+    if (cor1)
+        {  return "Pode passar!"
+
+    } else if (cor3)
+        { return "Melhor Freiar!"
+
+    }else if (cor2)
+        { return "Pare já!"
+
+        }
+    }
+
+    var semaforo = prompt("Qual a cor do sinal?")
+
+    document.write(AtivarSemaforo(verde, vermelho, amarelo));
+    pulaLinha()
+
+
+</Script>
