@@ -15,47 +15,53 @@
 
    function Calcularmaioridade(idadeusuario, idadepermitida) {
 
-        if (idadeusuario != idadepermitida)
+        if (idadeusuario < idadepermitida)
             {  return "Você não pode dirigir no Brasil!!"
 
-        } else (idadeusuario >= idadepermitida)
+        } else if (idadeusuario > idadepermitida)
            { return "Você pode dirigir no Brasil!!"
         }
     }
 
         var idadeusuario = prompt("Qual sua idade?")
 
-        document.write(Calcularmaioridade(17, 21));
+        document.write(Calcularmaioridade(idadeusuario, 21));
         pulaLinha()
 
 //Exercicio 5
 
+        document.write(" #Exercicio 5: ")
+        pulaLinha()
+
     function Poderbeber(idadeusuario, idadepermitida) {
 
-        if (idadeusuario == idadepermitida)
+        if (idadeusuario < idadepermitida)
             {  return "Você não pode beber no Brasil!!"
 
-        } else (idadeusuario >= idadepermitida)
+        } else if (idadeusuario > idadepermitida)
            { return "Você pode beber no Brasil!!"
         }
     }
 
         var idadeusuario = prompt("Qual sua idade?")
 
-        document.write(Poderbeber(17, 21));
+        document.write(Poderbeber(idadeusuario, 21));
         pulaLinha()
 
 //Exercicio 6
 
-    function AtivarSemaforo(cor1, cor2, cor3) {
+    document.write(" #Exercicio 6: ")
+    pulaLinha()
 
-    if (cor1)
+    function AtivarSemaforo(cor) {
+
+    if (cor == "verde")
         {  return "Pode passar!"
 
-    } else if (cor3)
+    } else if (cor == "amarelo")
         { return "Melhor Freiar!"
 
-    }else if (cor2)
+    }else if (cor == "vermelha")
         { return "Pare já!"
 
         }
@@ -63,7 +69,7 @@
 
     var semaforo = prompt("Qual a cor do sinal?")
 
-    document.write(AtivarSemaforo(verde, vermelho, amarelo));
+    document.write(AtivarSemaforo(semaforo));
     pulaLinha()
 
 
