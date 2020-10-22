@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento em JS</title>
+</head>
+
+<body>
+    <script>
+        var palavra = document.createElement("h1");
+        palavra.textContent = "Sorte"
+        document.body.appendChild(palavra);
+        palavra.style.margin = "30px"
+        palavra.style.fontSize = "50px"
+
+        palavra.addEventListener("mouseover", function() {
+            palavra.textContent = "~Azar~"
+        })
+        palavra.addEventListener("mouseleave", function() {
+            palavra.textContent = "Sorte"
+        })
+
+        palavra.addEventListener("click", function() {
+            palavra.textContent = "!Azar!"
+        })
+        palavra.addEventListener("mousedown", function() {
+            palavra.textContent = "Sorte"
+        })
+    </script>
+</body>
+
+</html>
